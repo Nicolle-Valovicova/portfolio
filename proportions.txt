@@ -1,0 +1,29 @@
+###########################  TEXT sizes ###########################
+
+/* HERO TITLE */
+font-size: clamp(3rem, 6vw, 5rem);
+
+/* HEADER NAV LINKS */
+desktop: 1.1rem;
+mobile: clamp(0.9rem, 2.5vw, 1.1rem);
+
+/* SECTION HEADERS (H1/H2) */
+font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+
+/* BODY TEXT */
+desktop: 1rem;
+mobile: 0.95rem;
+line-height: 1.55–1.6;
+
+
+#################### colors ###################
+/* 
+Primary page color #121212
+secondary page color #2b2b2b
+tertaire webcolor #8g8g8g
+primary txt color #f8f8f8
+secondary txt color #e8e8e8
+*/
+
+########### fonts ##############
+/* font-family: 'Raleway', sans-serif; */
