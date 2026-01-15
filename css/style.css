@@ -19,10 +19,39 @@
   padding: 0;
   margin: 0;
 }
+html{
+    overflow-y: scroll;
+
+scroll-behavior: smooth;
+}
 body {
   background-color: var(--main-bg-color);
   font-family: "Raleway", sans-serif;
   color: var(--primary-text-color);
+}
+/* importnant styling */
+.hidden{
+  opacity: 0;
+}
+.display{
+  opacity: 1;
+}
+.jumpToTop{
+  position: fixed;
+    right: 0;
+bottom: 0;
+transform: translate(-50px, -50px);
+z-index: 20000;
+}
+.jumpToTop span{
+  background-color: rgb(13, 13, 13);
+  font-size: 40px;
+  padding: 5px;
+  border-radius: 30px;
+  border: 1px solid white;
+}
+#meterialSymbol{
+  color: white;
 }
 .main-container {
   height: 100vh;
@@ -52,6 +81,10 @@ header ul li {
 header ul li:hover {
   scale: 1.1;
 }
+header ul li a{
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
 #header-logo {
   position: absolute;
   left: 0;
@@ -64,6 +97,8 @@ header ul li:hover {
   right: 0;
   transform: translate(-20px, 20px);
   cursor: pointer;
+      transition: all 0.5s ease 0s;
+
 }
 .hero-section {
   width: 50%;
@@ -87,6 +122,9 @@ header ul li:hover {
   display: flex;
   flex-direction: column;
 }
+.about-info h1, #exploringTitle, #skillsTitle{
+  font-size: var(--size-section-headers);
+}
 .about-contains {
   display: flex;
   align-items: center;
@@ -101,7 +139,6 @@ header ul li:hover {
 }
 /* css for skills page */
 .skills {
-  margin-top: 10rem;
   text-align: center;
   align-items: center;
   display: flex;
@@ -122,32 +159,55 @@ header ul li:hover {
     brightness(118%) contrast(119%);
 }
 /* css for projects page */
-.projects {
-  height: 100vh;
+
+.projects-title{
+  text-align: center;
+  width: 50%;
+  justify-self: center;
+  padding-bottom: 10%;
 }
-.projects-container.swiper{
+.projects-title h1{
+  font-size: var(--size-section-headers);
+  padding: 30px;
+}
+.projectTitlesForSLiders{
+  font-size: var(--size-section-headers);
+  justify-self: center;
+  padding: 60px;
+}
+.projects-shell {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  overflow-x: hidden;
+  position: relative;
+  overflow: visible; 
   padding: 20px 0;
 }
 
-.card-wrapper{
-  list-style: none;
-  padding: 0;
-  margin: 0;            /* important */
+.projects-container.swiper {
+  overflow: hidden; 
 }
 
-.card-item{
+.projects-container .swiper-pagination {
+  margin-top: 14px;
+}
+
+.card-wrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0; 
+}
+
+.card-item {
   height: auto;
 }
 
-.card-list .card-item{
+.card-list .card-item {
   list-style: none;
 }
-.card-list .card-item .card-link{
-user-select: none;  display: block;
+.card-list .card-item .card-link {
+  user-select: none;
+  display: block;
   background: #fff;
   padding: 18px;
   border-radius: 12px;
@@ -156,17 +216,17 @@ user-select: none;  display: block;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
   transition: 0.2s ease;
 }
-.card-list .card-item .card-link:hover{
+.card-list .card-item .card-link:hover {
   border-color: blue;
 }
-.card-list .card-link .card-img{
+.card-list .card-link .card-img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 12px;
   text-decoration: none;
 }
-.card-list .card-link .badge{
+.card-list .card-link .badge {
   color: rgb(0, 0, 0);
   padding: 8px 16px;
   font-size: 0.95rem;
@@ -175,14 +235,13 @@ user-select: none;  display: block;
   background: #f8f8f8;
   width: fit-content;
   border-radius: 50px;
-
 }
-.card-list .card-link .card-title{
+.card-list .card-link .card-title {
   font-size: 1.19rem;
   color: #2b2b2b;
   font-weight: 600;
 }
-.card-list .card-link .card-button{
+.card-list .card-link .card-button {
   padding: 15px;
   border-radius: 25px;
   margin: 30px 0 5px;
@@ -193,50 +252,56 @@ user-select: none;  display: block;
   border: 2px solid rgb(0, 0, 0);
   transition: 0.4s ease;
 }
-.card-list .card-link:hover .card-button{
-    color: rgb(255, 255, 255);
-background:blue;
-
+.card-list .card-link:hover .card-button {
+  color: rgb(255, 255, 255);
+  background: blue;
 }
-.projects-container .swiper-pagination{
-margin-bottom: -8px; /* moves all bullets down */
-}
-
-.projects-container .swiper-pagination-bullet{
- height: 13px;
- width: 13px;
- opacity: 0.5;
-background: rgb(255, 0, 247);
+.projects-shell .swiper-pagination {
+  margin-bottom: -30px; 
 }
 
-.projects-container .swiper-pagination-bullet-active{
-  background: #3b82f6; /* blue */
+.projects-shell .swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  opacity: 0.5;
+  background: rgb(255, 0, 247);
+}
+.projects-shell .swiper-pagination-bullet-active {
+  background: #3b82f6; 
   opacity: 1;
 }
-.projects-container .swiper-button-prev{
-color: red;
+.projects-shell .swiper-button-prev,
+.projects-shell .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
 }
-.projects-container .swiper-button-next{
-  color: red;
+
+.projects-shell .swiper-button-prev {
+  transform: translateX(-65px);
+}
+
+.projects-shell .swiper-button-next {
+  transform: translateX(65px); 
 }
 /* css for contact page */
-.contact{
+.contact {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
-.contact-text h2{
+.contact-text h2 {
   position: absolute;
   transform: translateY(250px);
   width: 500px;
 }
-.contact-text img{
+.contact-text img {
   width: max-content;
 }
 .contactform form {
-width: 400px;  
+  width: 400px;
 }
 form div {
   margin-top: 10px;
@@ -282,4 +347,34 @@ input[type="submit"] {
   background-color: rgb(42, 6, 126);
   width: 100%;
   margin-top: 20px;
+}
+/* style footer */
+footer{
+  height: 40px;
+  background-color: rgb(94, 94, 94);
+  align-items: center;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+.flexed-socials{
+  display: flex;
+  gap: 30px;
+}
+.flexed-socials img{
+  width: 40px;
+  color:white;
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+    brightness(118%) contrast(119%);
+
+}
+/* media styling */
+@media screen and (max-width: 768px) {
+  .projects-container {
+    margin: 0 10px 25px;
+  }
+  .projects-container .swiper-button-prev,
+  .projects-container .swiper-button-next {
+    display: none;
+  }
 }
