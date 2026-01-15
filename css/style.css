@@ -125,7 +125,100 @@ header ul li:hover {
 .projects {
   height: 100vh;
 }
+.projects-container.swiper{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  padding: 20px 0;
+}
 
+.card-wrapper{
+  list-style: none;
+  padding: 0;
+  margin: 0;            /* important */
+}
+
+.card-item{
+  height: auto;
+}
+
+.card-list .card-item{
+  list-style: none;
+}
+.card-list .card-item .card-link{
+user-select: none;  display: block;
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+}
+.card-list .card-item .card-link:hover{
+  border-color: blue;
+}
+.card-list .card-link .card-img{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  text-decoration: none;
+}
+.card-list .card-link .badge{
+  color: rgb(0, 0, 0);
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 16px 0 18px;
+  background: #f8f8f8;
+  width: fit-content;
+  border-radius: 50px;
+
+}
+.card-list .card-link .card-title{
+  font-size: 1.19rem;
+  color: #2b2b2b;
+  font-weight: 600;
+}
+.card-list .card-link .card-button{
+  padding: 15px;
+  border-radius: 25px;
+  margin: 30px 0 5px;
+  border: 2px solid blue;
+  color: rgb(0, 0, 0);
+  background: none;
+  cursor: pointer;
+  border: 2px solid rgb(0, 0, 0);
+  transition: 0.4s ease;
+}
+.card-list .card-link:hover .card-button{
+    color: rgb(255, 255, 255);
+background:blue;
+
+}
+.projects-container .swiper-pagination{
+margin-bottom: -8px; /* moves all bullets down */
+}
+
+.projects-container .swiper-pagination-bullet{
+ height: 13px;
+ width: 13px;
+ opacity: 0.5;
+background: rgb(255, 0, 247);
+}
+
+.projects-container .swiper-pagination-bullet-active{
+  background: #3b82f6; /* blue */
+  opacity: 1;
+}
+.projects-container .swiper-button-prev{
+color: red;
+}
+.projects-container .swiper-button-next{
+  color: red;
+}
 /* css for contact page */
 .contact{
   height: 100vh;
