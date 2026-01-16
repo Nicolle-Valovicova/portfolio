@@ -391,7 +391,7 @@
           </div>
           <div class="row-names">
             <div class="inline-names">
-              <label for="name">First name</label>
+              <label for="name"> <span class="required-sym">* </span>First name</label>
               <input class="borderline"
                 type="text"
                 id="name"
@@ -401,7 +401,7 @@
               />
             </div>
             <div class="inline-names">
-              <label for="secName">Last name</label>
+              <label for="secName"><span class="required-sym">* </span>Last name</label>
               <input class="borderline"
                 type="text"
                 id="secName"
@@ -412,7 +412,7 @@
             </div>
           </div>
           <div class="inline">
-            <label for="email">Email</label>
+            <label for="email"><span class="required-sym">* </span>Email</label>
             <input class="borderline"
               type="email"
               id="email"
@@ -422,14 +422,23 @@
             />
           </div>
           <div class="inline">
-            <label for="message">Message</label>
+            <label for="message"><span class="required-sym">* </span>Message</label>
             <textarea class="borderline"
               name="message"
               id="message"
               placeholder="  Write your message here.."
+              required
             ></textarea>
           </div>
-          <input type="submit" value="Submit" />
+         <button type="submit" class="submit-btn">
+  <span class="submit-text">Submit</span>
+
+  <!-- check icon (SVG) -->
+  <svg class="submit-check" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
           <p style="margin-top: 20px; font-size: 12px; text-align: center;">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
             aperiam!
