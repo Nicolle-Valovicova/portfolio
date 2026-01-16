@@ -29,20 +29,39 @@ document.querySelectorAll(".projects-shell").forEach((shell) => {
     },
   });
 });
-
+// add glass effects
+let navBarItems = document.querySelector(".headerLinks");
+let jumpToTopBtn = document.querySelector(".jumpToTop");
+let contactform = document.querySelector("#contactform");
+navBarItems.classList.add("glass");
+jumpToTopBtn.classList.add("glass");
+contactform.classList.add("glass");
+// scroll reveal
+// for navbar
 let lastScrollTop = 0;
-let navBar = document.querySelector("#header-bar")
-window.addEventListener("scroll", () =>{
-  let scrollTop= window.pageYOffset || document.documentElement.scrollTop;
-  if (scrollTop > lastScrollTop) {
-    navBar.style.top="-120px"
-    
-  }else{
-        navBar.style.top="0"
 
+// for jump to top btn
+let navBar = document.querySelector("#header-bar");
+window.addEventListener("scroll", () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    navBar.style.top = "-120px";
+  } else {
+    navBar.style.top = "0";
   }
-  lastScrollTop = scrollTop
-})
+  lastScrollTop = scrollTop;
+});
+// for jump to top btn
+let lastScrollBottom =0;
+window.addEventListener("scroll", () => {
+  let scrollBottom = window.pageYOffset || document.documentElement.scrollBottom;
+  if (scrollBottom > lastScrollBottom) {
+    jumpToTopBtn.style.bottom = "0px";
+  } else {
+    jumpToTopBtn.style.bottom = "-120px";
+  }
+  lastScrollBottom = scrollBottom;
+});
 // flag select stuff change language
 let dutchFlag = document.querySelector("#nederlands");
 let englishFlag = document.querySelector("#engels");
@@ -51,7 +70,7 @@ let currentlyActive = 1;
 
 function toggle() {
   currentlyActive *= -1;
-  
+
   if (currentlyActive < 0) {
     dutchFlag.classList.add("hidden");
     englishFlag.classList.remove("hidden");
@@ -61,10 +80,5 @@ function toggle() {
   }
 }
 
-
 dutchFlag.addEventListener("click", toggle);
 englishFlag.addEventListener("click", toggle);
-
-// add glass effects
-let navBarItems = document.querySelector(".headerLinks");
-navBarItems.classList.add("glass")
