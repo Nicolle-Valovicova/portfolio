@@ -3,6 +3,10 @@
   --secondary-page-color: #2b2b2b;
   --primary-text-color: #f8f8f8;
   --secondary-text-color: #e8e8e8;
+  --nightshade-color:#0f032d;
+  --purple-color:#4e2bcc;
+  --light-purple:#905bf4;
+
   --size-hero-title: clamp(3rem, 6vw, 5rem);
   /* desktop */
   --size-header-items: 1.1rem;
@@ -295,6 +299,7 @@ th {
 .card-item {
   height: auto;
   color: var(--primary-text-color);
+  transition: 0.3s ease;
 }
 
 .card-list .card-item {
@@ -311,18 +316,19 @@ th {
   text-decoration: none;
   border: 2px solid rgb(41, 41, 41);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
-  transition: 0.3s ease;
+
+  transition: border-color 0.3s ease;
 }
+
 .card-list .card-item .card-link:hover {
   border-radius: var(--radius-lg);
-  border: 2px solid transparent;
-
+  border: 2px solid var(--light-purple);
+/* 
   background: linear-gradient(#6969699c, #101010),
-    linear-gradient(to right, #f93dff 0%, #3f0072 100%);
-  /* ! CHANGE GRADIENT COLORS TO CHOSEN ONES */
+    linear-gradient(to right, var(--light-purple) 0%, var(--purple-color) 100%);
 
   background-origin: border-box;
-  background-clip: padding-box, border-box;
+  background-clip: padding-box, border-box; */
 }
 
 .card-list .card-link .card-img {
@@ -370,15 +376,18 @@ th {
   padding: 15px;
   border-radius: 25px;
   margin: 30px 0 5px;
-color: var(--primary-text-color);
-  background: none;
+  color: var(--primary-text-color);
   cursor: pointer;
-  border: 2px solid rgb(0, 0, 0);
-  transition: 0.4s ease;
+  background-color: transparent;
+  border: 1px solid rgb(188, 188, 188);
+background-image: url("../imgs/rsz_1img_0302.png");
+  background-repeat: repeat-x;
+  background-position: 0 -100%;
+  transition:1s ease;
+  
 }
-.card-list .card-link:hover .card-button {
-  color: rgb(255, 255, 255);
-  background: rgb(5, 146, 159);
+.card-list .card-link .card-button:hover{
+  background-position: center;
 }
 .projects-shell .swiper-pagination {
   margin-bottom: -30px;
@@ -387,11 +396,11 @@ color: var(--primary-text-color);
 .projects-shell .swiper-pagination-bullet {
   width: 13px;
   height: 13px;
-  opacity: 0.5;
-  background:  linear-gradient(rgb(123, 6, 128), rgb(5, 38, 106));
+  opacity: 0.3;
+  background:  linear-gradient(var(--light-purple), var(--purple-color));
 }
 .projects-shell .swiper-pagination-bullet-active {
-  background:  linear-gradient(rgba(247, 0, 255, 0.606), rgb(0, 85, 255));
+  background:  linear-gradient(var(--light-purple),var(--purple-color));
   opacity: 1;
 }
 .projects-shell .swiper-button-prev,
@@ -399,12 +408,7 @@ color: var(--primary-text-color);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
- background: linear-gradient(
-    rgba(247, 0, 255, 0.606),
-    rgb(0, 85, 255)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
+color: var(--light-purple);
   z-index: 10;
 }
 
