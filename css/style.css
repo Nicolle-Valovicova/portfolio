@@ -253,8 +253,8 @@ th {
 }
 .skill-imgs img {
   width: 70px;
-  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
-    brightness(118%) contrast(119%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(86deg)
+    brightness(100%) contrast(100%);
 }
 /* css for projects page */
 
@@ -298,6 +298,7 @@ th {
 
 .card-item {
   height: auto;
+  user-select: none;
   color: var(--primary-text-color);
   transition: 0.3s ease;
 }
@@ -317,18 +318,13 @@ th {
   border: 2px solid rgb(41, 41, 41);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
 
-  transition: border-color 0.3s ease;
+  transition:  0.3s ease;
 }
 
 .card-list .card-item .card-link:hover {
   border-radius: var(--radius-lg);
   border: 2px solid var(--light-purple);
-/* 
-  background: linear-gradient(#6969699c, #101010),
-    linear-gradient(to right, var(--light-purple) 0%, var(--purple-color) 100%);
 
-  background-origin: border-box;
-  background-clip: padding-box, border-box; */
 }
 
 .card-list .card-link .card-img {
@@ -380,7 +376,7 @@ th {
   cursor: pointer;
   background-color: transparent;
   border: 1px solid rgb(188, 188, 188);
-background-image: url("../imgs/rsz_1img_0302.png");
+background-image: url("../imgs/rsz_img_0307.png");
   background-repeat: repeat-x;
   background-position: 0 -100%;
   transition:1s ease;
@@ -507,6 +503,7 @@ footer {
 }
 .flexed-socials {
   display: flex;
+  margin-right: 80px;
   gap: 30px;
 }
 .flexed-socials img {
