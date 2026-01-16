@@ -36,6 +36,11 @@ let contactform = document.querySelector("#contactform");
 navBarItems.classList.add("glass");
 jumpToTopBtn.classList.add("glass");
 contactform.classList.add("glass");
+// add hsla gradient
+let gradientCard = document.querySelectorAll(".card-item");
+gradientCard.forEach(c =>{
+  c.classList.add("hslaGrad1")
+})
 // scroll reveal
 // for navbar
 let lastScrollTop = 0;
