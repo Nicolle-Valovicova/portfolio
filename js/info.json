@@ -1,5 +1,40 @@
 {
-    "english":[
-        
+    "nav":[
+        {
+            "navBar":["About me", "Projects", "Contact"]
+        }
+    ],
+    "home":[
+        {
+            "heroTitle": "Welcome to My Developer Portfolio",
+            "heroText": "This is my personal portfolio, where I document my growth as a developer. Here you’ll find who I am, what I’m working toward, and the projects I’ve created both in school and at home."
+        }
+    ],
+    "about":[
+        {
+            "aboutTitle":"About me",
+            "aboutMe1":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequatur nulla voluptatum ad aliquid earum, dolorem eum inventore recusandae? Nihil asperiores veniam repudiandae error ratione necessitatibus numquam vero dolorum qui. Laboriosam sint, cum aliquam atque quo cupiditate suscipit?",
+            "aboutMe2":"Ex magnam eveniet omnis optio, hic at dolores quas in incidunt vel quia sint accusamus pariatur ipsum. Tempore illo sint accusamus explicabo deleniti, labore fugit dignissimos! Dolorum suscipit illo pariatur eveniet ea quos sint nihil? Nulla atque ea aspernatur tempore a, quia, praesentium eligendi distinctio repellendus ipsam, similique itaque. Odio dolorum quam, a accusamus pariatur quis nesciunt nobis incidunt perspiciatis error in!"
+        }
+    ],
+    "skills":[
+        {
+            "skillsTitle":"Skills",
+            "skillsText":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non sed ut hic sit aliquid fugit perferendis cumque ullam, ipsum repellat?"
+        }
+    ],
+    "exploring":[
+        {
+            "exploringTitle":"Exploring",
+            "exploringText":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non sed ut hic sit aliquid fugit perferendis cumque ullam, ipsum repellat?"
+        }
+    ],
+    "projects":[
+        {
+            "projectsTitle":"Projects",
+            "projectsText":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae autem quia tenetur veniam exercitationem. Laboriosam repellendus perspiciatis, temporibus nihil veritatis, mollitia fuga vel et molestias aperiam ipsam rerum, impedit nesciunt.",
+            "cardsTitleSchool": "School projects",
+            "cardsTitleHome":"Personal projects"
+        }
     ]
 }

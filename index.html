@@ -18,7 +18,18 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward"
     />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_upward" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_upward"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=mail"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=phone_enabled"
+    />
     <!-- codes and tweaks -->
     <!-- swiper js -->
     <link
@@ -33,13 +44,14 @@
   <body>
     <!--* home page  -->
     <!-- header -->
-     <div class="jumpToTop">
+    <div class="jumpToTop">
       <a id="meterialSymbol" href="#main">
-<span class="material-symbols-outlined">
-arrow_upward
-</span>
-</a>
-     </div>
+        <img
+          src="svg/arrow_upward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+          alt=""
+        />
+      </a>
+    </div>
     <div class="main-container" id="main">
       <div class="language-select">
         <img
@@ -53,14 +65,19 @@ arrow_upward
           alt=""
         />
       </div>
-      <header>
-        <img id="header-logo" src="imgs/DMNIC logo white png.png" alt="" />
-        <ul class="headerLinks">
-          <li id="aboutMe"><a href="#aboutMe-container">About me</a></li>
-          <li id="myProjects"><a href="#projects">Projects</a></li>
-          <li id="ContactMe"><a href="#contact">Contact</a></li>
-        </ul>
-      </header>
+    <div class="header-wrapper">
+      <header id="header-bar">
+    <img id="header-logo" src="imgs/DMNIC logo white png.png" alt="DMNIC" />
+
+    <ul class="headerLinks">
+      <li><a href="#aboutMe-container">About me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+</div>
+
+
       <div class="hero-section">
         <h1>Welcome to My Developer Portfolio</h1>
         <p>
@@ -98,10 +115,55 @@ arrow_upward
           </p>
         </div>
       </div>
+      <div class="extra-info">
+        <div class="contacts">
+          <h3>Contact info</h3>
+          <div class="contact-item">
+            <img
+              src="svg/mail_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+            <p>dmnicnl@gmail.com</p>
+          </div>
+          <div class="contact-item">
+            <img
+              src="svg/phone_enabled_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+            <p>+31 649542593</p>
+          </div>
+        </div>
+        <div class="languages">
+          <table>
+            <tr>
+              <th>Language</th>
+              <th>Fluency</th>
+            </tr>
+            <tr>
+              <td>Dutch</td>
+              <td>Fluent / native-level (speaking + writing).</td>
+            </tr>
+            <tr>
+              <td>English</td>
+              <td>
+                Fluent conversational & written; near-native for daily and
+                technical use.
+              </td>
+            </tr>
+            <tr>
+              <td>Slovak</td>
+              <td>
+                Fluent spoken (native-level conversation), writing has grammar
+                mistakes; occasional gaps with slang/advanced vocabulary.
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </div>
-    <div class="skills" style="padding-top: 10rem;">
-      <h1 id="skillsTitle" style="padding: 50px;">Skills</h1>
-      <p style="padding-top: 20px; width: 500px; padding-bottom: 70px">
+    <div class="skills">
+      <h1 id="skillsTitle" style="padding: 30px">Skills</h1>
+      <p style="width: 500px; padding-bottom: 70px">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non sed ut hic
         sit aliquid fugit perferendis cumque ullam, ipsum repellat?
       </p>
@@ -121,8 +183,10 @@ arrow_upward
       </div>
     </div>
     <div class="skills">
-      <h1 id="exploringTitle" style="padding-top: 10rem; padding-bottom: 3rem;">Exploring</h1>
-      <p style="padding-top: 20px; width: 500px; padding-bottom: 70px">
+      <h1 id="exploringTitle" style="padding-top: 10rem; padding-bottom: 30px">
+        Exploring
+      </h1>
+      <p style="width: 500px; padding-bottom: 70px">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non sed ut hic
         sit aliquid fugit perferendis cumque ullam, ipsum repellat?
       </p>
@@ -133,13 +197,13 @@ arrow_upward
         </div>
         <div class="skill">
           <img src="svg/php01-svgrepo-com.svg" alt="html img" />
-          <h2>Skill</h2>
+          <h2>PHP</h2>
         </div>
       </div>
     </div>
     <!-- projects page -->
-    <div class="projects" id="projects">
-      <div class="projects-title" style="padding-top: 4rem;">
+    <div class="projects" id="projects" style="margin-top: 10rem">
+      <div class="projects-title">
         <h1>Projects</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
@@ -155,51 +219,61 @@ arrow_upward
             <li class="card-item swiper-slide">
               <a href="#" class="card-link">
                 <img src="imgs/demoPic.jpg" alt="" class="card-img" />
-                <p class="badge">Developer</p>
+                <div class="badges">
+                  <p class="badge">HTML</p>
+                  <p class="badge">JS</p>
+                </div>
                 <h2 class="card-title">Lorem ipsum...</h2>
                 <button class="card-button">Go to site</button>
                 <button class="card-button">View in Github</button>
-                <button class="card-button">Read more</button>
               </a>
             </li>
             <li class="card-item swiper-slide">
               <a href="#" class="card-link">
                 <img src="imgs/demoPic.jpg" alt="" class="card-img" />
-                <p class="badge">Developer</p>
+                <div class="badges">
+                  <p class="badge">HTML</p>
+                  <p class="badge">JS</p>
+                </div>
                 <h2 class="card-title">Lorem ipsum...</h2>
                 <button class="card-button">Go to site</button>
                 <button class="card-button">View in Github</button>
-                <button class="card-button">Read more</button>
               </a>
             </li>
             <li class="card-item swiper-slide">
               <a href="#" class="card-link">
                 <img src="imgs/demoPic.jpg" alt="" class="card-img" />
-                <p class="badge">Developer</p>
+                <div class="badges">
+                  <p class="badge">HTML</p>
+                  <p class="badge">JS</p>
+                </div>
                 <h2 class="card-title">Lorem ipsum...</h2>
                 <button class="card-button">Go to site</button>
                 <button class="card-button">View in Github</button>
-                <button class="card-button">Read more</button>
               </a>
             </li>
             <li class="card-item swiper-slide">
               <a href="#" class="card-link">
                 <img src="imgs/demoPic.jpg" alt="" class="card-img" />
-                <p class="badge">Developer</p>
+                <div class="badges">
+                  <p class="badge">HTML</p>
+                  <p class="badge">JS</p>
+                </div>
                 <h2 class="card-title">Lorem ipsum...</h2>
                 <button class="card-button">Go to site</button>
                 <button class="card-button">View in Github</button>
-                <button class="card-button">Read more</button>
               </a>
             </li>
             <li class="card-item swiper-slide">
               <a href="#" class="card-link">
                 <img src="imgs/demoPic.jpg" alt="" class="card-img" />
-                <p class="badge">Developer</p>
+                <div class="badges">
+                  <p class="badge">HTML</p>
+                  <p class="badge">JS</p>
+                </div>
                 <h2 class="card-title">Lorem ipsum...</h2>
                 <button class="card-button">Go to site</button>
                 <button class="card-button">View in Github</button>
-                <button class="card-button">Read more</button>
               </a>
             </li>
             <!-- more slides... -->
@@ -218,54 +292,63 @@ arrow_upward
             <li class="card-item swiper-slide">
               <a href="#" class="card-link">
                 <img src="imgs/demoPic.jpg" alt="" class="card-img" />
-                <p class="badge">Developer</p>
+                <div class="badges">
+                  <p class="badge">HTML</p>
+                  <p class="badge">JS</p>
+                </div>
                 <h2 class="card-title">Lorem ipsum...</h2>
                 <button class="card-button">Go to site</button>
                 <button class="card-button">View in Github</button>
-                <button class="card-button">Read more</button>
               </a>
             </li>
             <li class="card-item swiper-slide">
               <a href="#" class="card-link">
                 <img src="imgs/demoPic.jpg" alt="" class="card-img" />
-                <p class="badge">Developer</p>
+                <div class="badges">
+                  <p class="badge">HTML</p>
+                  <p class="badge">JS</p>
+                </div>
                 <h2 class="card-title">Lorem ipsum...</h2>
                 <button class="card-button">Go to site</button>
                 <button class="card-button">View in Github</button>
-                <button class="card-button">Read more</button>
               </a>
             </li>
             <li class="card-item swiper-slide">
               <a href="#" class="card-link">
                 <img src="imgs/demoPic.jpg" alt="" class="card-img" />
-                <p class="badge">Developer</p>
+                <div class="badges">
+                  <p class="badge">HTML</p>
+                  <p class="badge">JS</p>
+                </div>
                 <h2 class="card-title">Lorem ipsum...</h2>
                 <button class="card-button">Go to site</button>
                 <button class="card-button">View in Github</button>
-                <button class="card-button">Read more</button>
               </a>
             </li>
             <li class="card-item swiper-slide">
               <a href="#" class="card-link">
                 <img src="imgs/demoPic.jpg" alt="" class="card-img" />
-                <p class="badge">Developer</p>
+                <div class="badges">
+                  <p class="badge">HTML</p>
+                  <p class="badge">JS</p>
+                </div>
                 <h2 class="card-title">Lorem ipsum...</h2>
                 <button class="card-button">Go to site</button>
                 <button class="card-button">View in Github</button>
-                <button class="card-button">Read more</button>
               </a>
             </li>
             <li class="card-item swiper-slide">
               <a href="#" class="card-link">
                 <img src="imgs/demoPic.jpg" alt="" class="card-img" />
-                <p class="badge">Developer</p>
+                <div class="badges">
+                  <p class="badge">HTML</p>
+                  <p class="badge">JS</p>
+                </div>
                 <h2 class="card-title">Lorem ipsum...</h2>
                 <button class="card-button">Go to site</button>
                 <button class="card-button">View in Github</button>
-                <button class="card-button">Read more</button>
               </a>
             </li>
-            <!-- more slides... -->
           </ul>
         </div>
 
@@ -277,6 +360,7 @@ arrow_upward
     </div>
     <div class="contact" id="contact">
       <div class="contact-text">
+        <h1 id="reachoutTitle">Reach out</h1>
         <h2>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, nihil?
         </h2>
@@ -337,14 +421,12 @@ arrow_upward
       </div>
     </div>
     <footer>
-      <div class="copyright">
-        © 2026 DMNIC. All rights reserved.
-      </div>
+      <div class="copyright">© 2026 DMNIC. All rights reserved.</div>
       <div class="flexed-socials">
-        <img src="svg/linkedin-round-svgrepo-com.svg" alt="">
-        <img src="svg/github-142-svgrepo-com.svg" alt="">
-        <img src="svg/instagram-svgrepo-com.svg" alt="">
-        <img src="svg/youtube-168-svgrepo-com.svg" alt="">
+        <img src="svg/linkedin-round-svgrepo-com.svg" alt="" />
+        <img src="svg/github-142-svgrepo-com.svg" alt="" />
+        <img src="svg/instagram-svgrepo-com.svg" alt="" />
+        <img src="svg/youtube-168-svgrepo-com.svg" alt="" />
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>

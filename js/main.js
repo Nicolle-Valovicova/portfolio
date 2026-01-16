@@ -1,32 +1,48 @@
-//  script for scrollbar cards
-const swiper = new Swiper(".projects-container", {
-  loop: true,
-  spaceBetween: 30,
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
+document.querySelectorAll(".projects-shell").forEach((shell) => {
+  const swiperEl = shell.querySelector(".projects-container");
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
+  new Swiper(swiperEl, {
+    loop: true,
+    spaceBetween: 30,
+
+    pagination: {
+      el: shell.querySelector(".swiper-pagination"),
+      clickable: true,
+      dynamicBullets: true,
     },
-    768: {
-      slidesPerView: 2,
+
+    navigation: {
+      nextEl: shell.querySelector(".swiper-button-next"),
+      prevEl: shell.querySelector(".swiper-button-prev"),
     },
-    1024: {
-      slidesPerView: 3,
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
     },
-  },
+  });
 });
 
+let lastScrollTop = 0;
+let navBar = document.querySelector("#header-bar")
+window.addEventListener("scroll", () =>{
+  let scrollTop= window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    navBar.style.top="-120px"
+    
+  }else{
+        navBar.style.top="0"
+
+  }
+  lastScrollTop = scrollTop
+})
 // flag select stuff change language
 let dutchFlag = document.querySelector("#nederlands");
 let englishFlag = document.querySelector("#engels");
@@ -48,3 +64,7 @@ function toggle() {
 
 dutchFlag.addEventListener("click", toggle);
 englishFlag.addEventListener("click", toggle);
+
+// add glass effects
+let navBarItems = document.querySelector(".headerLinks");
+navBarItems.classList.add("glass")
