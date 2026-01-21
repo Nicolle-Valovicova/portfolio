@@ -33,9 +33,14 @@ document.querySelectorAll(".projects-shell").forEach((shell) => {
 let navBarItems = document.querySelector(".headerLinks");
 let jumpToTopBtn = document.querySelector(".jumpToTop");
 let contactform = document.querySelector("#contactform");
+let skillsContaining = document.querySelectorAll(".skill-imgs");
 navBarItems.classList.add("glass");
 jumpToTopBtn.classList.add("glass");
 contactform.classList.add("glass");
+
+skillsContaining.forEach(s =>{
+  s.classList.add("glass");
+})
 // add hsla gradient
 let gradientCard = document.querySelectorAll(".card-item");
 gradientCard.forEach((c) => {
@@ -92,19 +97,19 @@ englishFlag.addEventListener("click", toggle);
 let read_more_btns = document.querySelectorAll(".read-more");
 let projectsInfo_container = document.querySelector(".projectsInfo-container");
 let closeInfoBtn = document.querySelector("#closeInfo");
-function hideProjectInfo(){
+let bodyy = document.querySelector("#bodyy");
+
+function hideProjectInfo() {
   projectsInfo_container.classList.add("hidden");
   projectsInfo_container.classList.remove("display");
-  
 }
 hideProjectInfo();
 read_more_btns.forEach((btn) => {
   btn.addEventListener("click", () => {
-  projectsInfo_container.classList.add("display");
-
+    projectsInfo_container.classList.add("display");
   });
 });
 
-closeInfoBtn.addEventListener("click", ()=>{
-  hideProjectInfo()
-})
+closeInfoBtn.addEventListener("click", () => {
+  hideProjectInfo();
+});
