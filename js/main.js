@@ -38,9 +38,9 @@ jumpToTopBtn.classList.add("glass");
 contactform.classList.add("glass");
 // add hsla gradient
 let gradientCard = document.querySelectorAll(".card-item");
-gradientCard.forEach(c =>{
-  c.classList.add("hslaGrad1")
-})
+gradientCard.forEach((c) => {
+  c.classList.add("hslaGrad1");
+});
 // scroll reveal
 // for navbar
 let lastScrollTop = 0;
@@ -57,9 +57,10 @@ window.addEventListener("scroll", () => {
   lastScrollTop = scrollTop;
 });
 // for jump to top btn
-let lastScrollBottom =0;
+let lastScrollBottom = 0;
 window.addEventListener("scroll", () => {
-  let scrollBottom = window.pageYOffset || document.documentElement.scrollBottom;
+  let scrollBottom =
+    window.pageYOffset || document.documentElement.scrollBottom;
   if (scrollBottom > lastScrollBottom) {
     jumpToTopBtn.style.bottom = "0px";
   } else {
@@ -87,3 +88,23 @@ function toggle() {
 
 dutchFlag.addEventListener("click", toggle);
 englishFlag.addEventListener("click", toggle);
+// reveal project cards information and close
+let read_more_btns = document.querySelectorAll(".read-more");
+let projectsInfo_container = document.querySelector(".projectsInfo-container");
+let closeInfoBtn = document.querySelector("#closeInfo");
+function hideProjectInfo(){
+  projectsInfo_container.classList.add("hidden");
+  projectsInfo_container.classList.remove("display");
+  
+}
+hideProjectInfo();
+read_more_btns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+  projectsInfo_container.classList.add("display");
+
+  });
+});
+
+closeInfoBtn.addEventListener("click", ()=>{
+  hideProjectInfo()
+})

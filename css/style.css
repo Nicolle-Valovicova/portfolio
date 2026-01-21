@@ -3,9 +3,9 @@
   --secondary-page-color: #2b2b2b;
   --primary-text-color: #f8f8f8;
   --secondary-text-color: #e8e8e8;
-  --nightshade-color:#0f032d;
-  --purple-color:#4e2bcc;
-  --light-purple:#905bf4;
+  --nightshade-color: #0f032d;
+  --purple-color: #4e2bcc;
+  --light-purple: #905bf4;
 
   --size-hero-title: clamp(3rem, 6vw, 5rem);
   /* desktop */
@@ -43,16 +43,19 @@ body {
 /* importnant styling */
 .hidden {
   opacity: 0;
+  pointer-events: none;
 }
 .display {
   opacity: 1;
+  pointer-events: auto;
 }
 .glass {
   background: rgba(17, 17, 17, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(127, 127, 127, 0.3);
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4),
+  box-shadow:
+    2px 2px 10px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(202, 221, 226, 0.5),
     inset 0 -1px 0 rgba(255, 255, 255, 0.1),
     inset 0 0 4px 2px rgba(59, 59, 59, 0.2);
@@ -60,11 +63,8 @@ body {
 }
 .hslaGrad1 {
   background-color: hsla(0, 0%, 9%, 1);
-  background-image: radial-gradient(
-      at 80% 100%,
-      rgb(16, 16, 16) 0px,
-      transparent 50%
-    ),
+  background-image:
+    radial-gradient(at 80% 100%, rgb(16, 16, 16) 0px, transparent 50%),
     radial-gradient(at 0% 0%, hsla(0, 0%, 41%, 0.61) 0px, transparent 50%);
 }
 
@@ -92,13 +92,12 @@ body {
 }
 .main-container {
   height: 100vh;
- background: radial-gradient(
-  circle at 50% 10%,
-  var(--light-purple) 10%,
-  var(--purple-color) 30%,
-  transparent 40%
-);
-
+  background: radial-gradient(
+    circle at 50% 10%,
+    var(--light-purple) 10%,
+    var(--purple-color) 30%,
+    transparent 40%
+  );
 }
 .header-bgColor {
   width: 100vw;
@@ -187,7 +186,7 @@ body {
 .aboutMe-container {
   height: 100vh;
   width: 100%;
-box-shadow: 0px -50px 50px 50px rgb(0, 0, 0);
+  box-shadow: 0px -50px 50px 50px rgb(0, 0, 0);
   color: var(--primary-text-color);
   justify-content: center;
   align-items: center;
@@ -260,11 +259,33 @@ th {
 }
 .skill-imgs img {
   width: 70px;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(86deg)
-    brightness(100%) contrast(100%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(86deg) brightness(100%)
+    contrast(100%);
 }
 /* css for projects page */
+.projectsInfo-container {
+  width: 60vw;
+  height: 80vh;
+border-radius: var(--radius-lg);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
+  background: rgba(59, 59, 59);
+transition: 0.3s ease;
+  display: flex;
+
+  z-index: 1000;
+}
+.projectsInfo-container img{
+  width: 40px;
+  position: absolute;
+  cursor: pointer;
+  background-color: var(--purple-color);
+  border-radius: 50%;
+  margin: 20px;
+}
 .projects-title {
   text-align: center;
   width: 50%;
@@ -282,7 +303,7 @@ th {
 }
 .projects-shell {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
   position: relative;
   overflow: visible;
@@ -319,19 +340,19 @@ th {
   user-select: none;
   display: block;
   background: transparent;
+  height: 550px;
   padding: 10px;
   border-radius: var(--radius-lg);
   text-decoration: none;
   border: 2px solid rgb(41, 41, 41);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
 
-  transition:  0.3s ease;
+  transition: 0.3s ease;
 }
 
 .card-list .card-item .card-link:hover {
   border-radius: var(--radius-lg);
   border: 2px solid var(--light-purple);
-
 }
 
 .card-list .card-link .card-img {
@@ -363,7 +384,7 @@ th {
 }
 .card-list .card-link .badge {
   color: rgb(0, 0, 0);
-  padding: 4px 16px;
+  padding: 2px 8px;
   font-size: 0.95rem;
   font-weight: 500;
   margin: 16px 0 18px;
@@ -383,13 +404,12 @@ th {
   cursor: pointer;
   background-color: transparent;
   border: 1px solid rgb(188, 188, 188);
-background-image: url("../imgs/rsz_img_0307.png");
+  background-image: url("../imgs/rsz_img_0307.png");
   background-repeat: repeat-x;
   background-position: 0 -100%;
-  transition:1s ease;
-  
+  transition: 1s ease;
 }
-.card-list .card-link .card-button:hover{
+.card-list .card-link .card-button:hover {
   background-position: center;
   color: var(--nightshade-color);
 }
@@ -401,10 +421,10 @@ background-image: url("../imgs/rsz_img_0307.png");
   width: 13px;
   height: 13px;
   opacity: 0.3;
-  background:  linear-gradient(var(--light-purple), var(--purple-color));
+  background: linear-gradient(var(--light-purple), var(--purple-color));
 }
 .projects-shell .swiper-pagination-bullet-active {
-  background:  linear-gradient(var(--light-purple),var(--purple-color));
+  background: linear-gradient(var(--light-purple), var(--purple-color));
   opacity: 1;
 }
 .projects-shell .swiper-button-prev,
@@ -412,7 +432,7 @@ background-image: url("../imgs/rsz_img_0307.png");
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-color: var(--light-purple);
+  color: var(--light-purple);
   z-index: 10;
 }
 
@@ -427,7 +447,7 @@ color: var(--light-purple);
 .contact {
   height: 100vh;
   display: flex;
-  
+
   align-items: center;
   justify-content: space-around;
 }
@@ -437,16 +457,16 @@ color: var(--light-purple);
   width: 500px;
 }
 .contact-text img {
-width: max-content;
+  width: max-content;
 }
 .contactform {
   border-radius: var(--radius-big);
   padding: 20px;
 }
-.required-sym{
+.required-sym {
   color: var(--light-purple);
   position: absolute;
-  transform: translate(-15px,-5px);
+  transform: translate(-15px, -5px);
   font-size: 32px;
 }
 .contactform form {
@@ -465,13 +485,12 @@ form input {
   color: var(--primary-text-color);
   background-color: transparent;
 }
-.borderline{
-    border: 2px solid rgb(139, 139, 139);
-
+.borderline {
+  border: 2px solid rgb(139, 139, 139);
 }
 .inline {
   display: flex;
-  
+
   flex-direction: column;
   justify-content: space-around;
 }
@@ -495,17 +514,17 @@ textarea {
   border-radius: var(--radius-md);
   height: 100px;
   border: 2px solid white;
-font: inherit;
+  font: inherit;
   background-color: transparent;
 }
 /* YOUR BUTTON STYLE (kept) */
-.submit-btn{
+.submit-btn {
   justify-self: center;
   color: var(--primary-text-color);
   border-radius: var(--radius-big);
   padding: 14px 16px;
   cursor: pointer;
-  background-image: linear-gradient(rgb(183, 0, 255), rgb(72, 0, 255));
+  background-image: linear-gradient(var(--light-purple), var(--purple-color));
   width: 100%;
   margin-top: 20px;
 
@@ -520,60 +539,59 @@ font: inherit;
   overflow: hidden;
 }
 
-.submit-text{
+.submit-text {
   transition: 200ms;
 }
 
-.submit-check{
+.submit-check {
   position: absolute;
   width: 22px;
   height: 22px;
-  color: transparent;      /* hidden until done */
+  color: transparent; /* hidden until done */
   transition: 200ms;
 }
 
 /* ON FOCUS (click) -> spinner */
-.submit-btn:focus{
+.submit-btn:focus {
   color: transparent;
-    background-color: transparent;
+  background-color: transparent;
 
   border: 2px solid transparent;
   border-radius: 50%;
-  width: 50px;         /* override width:100% */
+  width: 50px; /* override width:100% */
   height: 50px;
-  padding: 0;          /* tighter circle */
-  background-image: none;  /* looks like the spinner */
+  padding: 0; /* tighter circle */
+  background-image: none; /* looks like the spinner */
   border-left: 2px solid rgb(183, 0, 255);
   animation: submit-spin 2s 500ms forwards;
 }
 
-.submit-btn:focus .submit-text{
+.submit-btn:focus .submit-text {
   opacity: 0;
 }
 
-.submit-btn:focus .submit-check{
+.submit-btn:focus .submit-check {
   animation: submit-check 300ms 2250ms forwards;
 }
 
 /* SPIN */
-@keyframes submit-spin{
-  80%{
+@keyframes submit-spin {
+  80% {
     border: 2px solid transparent;
     border-left: 2px solid rgb(183, 0, 255);
   }
-  100%{
+  100% {
     transform: rotate(720deg);
     border: 2px solid rgb(183, 0, 255);
   }
 }
 
 /* CHECK SHOW */
-@keyframes submit-check{
-  to{
+@keyframes submit-check {
+  to {
     color: rgb(183, 0, 255);
   }
 }
-
 
 /* style footer */
 footer {
@@ -592,8 +610,8 @@ footer {
 .flexed-socials img {
   width: 40px;
   color: white;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(86deg)
-    brightness(100%) contrast(100%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(86deg) brightness(100%)
+    contrast(100%);
 }
 /* media styling */
 @media screen and (max-width: 768px) {
