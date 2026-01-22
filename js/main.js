@@ -4,10 +4,60 @@ window.addEventListener("scroll", () => {
   const header_img = document.querySelector("#hero1Img");
 
   header_img.style.transform = `
-    translateY(${scrollY * -0.2}px)
-    rotate(${scrollY * 0.03}deg)
+    translateY(${scrollY * -0.5}px)
+    scale(${1 + scrollY * 0.0004})
   `;
 });
+const hero2Img = document.querySelector("#hero2Img");
+const skillsWrapper = document.querySelector("#skills-wrapper");
+
+window.addEventListener("scroll", () => {
+  const rect = skillsWrapper.getBoundingClientRect();
+  const vh = window.innerHeight;
+
+  // only run while wrapper overlaps the viewport
+  const visible = rect.bottom > 0 && rect.top < vh;
+
+  if (!visible) {
+    hero2Img.style.transform = ""; // stop when not near/visible
+    return;
+  }
+
+  // progress 0..1 while passing the wrapper
+  const progress = (vh - rect.top) / (vh + rect.height);
+
+  // parallax strength (tweak these)
+  const y = (progress - 0.5) * -720; // px range
+
+  hero2Img.style.transform = `translateY(${y}px) `;
+});
+const hero3Img = document.querySelector("#hero3Img");
+const contactSection = document.querySelector("#contact"); // change if needed
+
+window.addEventListener("scroll", () => {
+  const rect = contactSection.getBoundingClientRect();
+  const vh = window.innerHeight;
+
+  // outside view → keep hidden below
+  if (rect.top > vh) {
+    hero3Img.style.transform = "translateY(120px)";
+    return;
+  }
+
+  // fully passed → lock in place
+  if (rect.bottom < 0) {
+    hero3Img.style.transform = "translateY(0px)";
+    return;
+  }
+
+  // progress 0 → 1
+  const progress = Math.min(1, Math.max(0, (vh - rect.top) / vh));
+
+  const y = 120 * (1 - progress);
+
+  hero3Img.style.transform = `translateY(${y}px)`;
+});
+
 
 // swiper code for the cards in projects
 document.querySelectorAll(".projects-shell").forEach((shell) => {
