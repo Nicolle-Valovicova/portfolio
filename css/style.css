@@ -426,6 +426,11 @@ transition: 0.3s ease;
   background-repeat: repeat-x;
   background-position: 0 -100%;
   transition: 1s ease;
+
+}
+.card-list .card-link .card-button a{
+  text-decoration: none;
+  color: var(--primary-text-color);
 }
 .card-list .card-link .card-button:hover {
   background-position: center;
@@ -583,7 +588,7 @@ textarea {
   height: 50px;
   padding: 0; /* tighter circle */
   background-image: none; /* looks like the spinner */
-  border-left: 2px solid rgb(183, 0, 255);
+  border-left: 2px solid var(--primary-text-color);
   animation: submit-spin 2s 500ms forwards;
 }
 
@@ -599,18 +604,18 @@ textarea {
 @keyframes submit-spin {
   80% {
     border: 2px solid transparent;
-    border-left: 2px solid rgb(183, 0, 255);
+    border-left: 2px solid var(--primary-text-color);
   }
   100% {
     transform: rotate(720deg);
-    border: 2px solid rgb(183, 0, 255);
+    border: 2px solid var(--primary-text-color);
   }
 }
 
 /* CHECK SHOW */
 @keyframes submit-check {
   to {
-    color: rgb(183, 0, 255);
+    color: var(--primary-text-color);
   }
 }
 

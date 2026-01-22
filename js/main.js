@@ -1,3 +1,6 @@
+// background img animation/parallax
+
+// swiper code for the cards in projects
 document.querySelectorAll(".projects-shell").forEach((shell) => {
   const swiperEl = shell.querySelector(".projects-container");
 
