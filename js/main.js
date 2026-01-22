@@ -1,4 +1,13 @@
 // background img animation/parallax
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  const header_img = document.querySelector("#hero1Img");
+
+  header_img.style.transform = `
+    translateY(${scrollY * -0.2}px)
+    rotate(${scrollY * 0.03}deg)
+  `;
+});
 
 // swiper code for the cards in projects
 document.querySelectorAll(".projects-shell").forEach((shell) => {

@@ -93,9 +93,15 @@ body {
 #meterialSymbol {
   color: white;
 }
+ section.hero1{position:absolute; width:100%; height:100svh; overflow:hidden; display:flex; align-items:center; justify-content:center;}
+    section.hero1::before{
+      content:""; position:absolute; inset:auto 0 0 0; height:110px;
+      background:linear-gradient(to top, var(--bg-2), transparent); z-index:1000;
+    }  
+section.hero1 img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; pointer-events:none;}
+
 .main-container {
   height: 100vh;
-    background-image: url(../imgs/AIEnhancer_072f8d86c21f7ee5430631293e654f.png);
    background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
