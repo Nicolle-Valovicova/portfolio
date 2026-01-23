@@ -173,3 +173,8 @@ read_more_btns.forEach((btn) => {
 closeInfoBtn.addEventListener("click", () => {
   hideProjectInfo();
 });
+// TODO animations on scroll with aos
+// TODO make website responsive for tablet and phone
+//  TODO php form send email directly to email
+// TODO update dmnic email to info@dmnic.nl
+// TODO make dutch version with json fetch
