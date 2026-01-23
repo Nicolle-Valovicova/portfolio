@@ -514,12 +514,15 @@ th {
   background-position: center;
   background-repeat: no-repeat;
   align-items: center;
-  justify-content: space-around;
+    justify-content: space-around;
+}
+#reachoutTitle{
+  font-size: 70px;
 }
 .contact-text h2 {
   position: absolute;
-  transform: translateY(250px);
   width: 500px;
+  transform: translateY(80px);
 }
 .contact-text img {
   width: max-content;
@@ -527,6 +530,7 @@ th {
 .contactform {
   border-radius: var(--radius-big);
   padding: 20px;
+  transform: translateX(-50px);
 }
 .required-sym {
   color: var(--light-purple);
@@ -582,12 +586,17 @@ textarea {
   font: inherit;
   background-color: transparent;
 }
-.webgl{
-  width: 700px;      /* or 100% */
-  height: 420px;
-  display:block;
-  z-index: 1000;
+.car-3d-wrap {
+  position: relative;
+  overflow: visible; /* <-- IMPORTANT */
 }
+
+#bmwCanvas {
+  width: 900px;
+  height: 600px;
+  display: block;
+}
+
 /* YOUR BUTTON STYLE (kept) */
 .submit-btn {
   justify-self: center;

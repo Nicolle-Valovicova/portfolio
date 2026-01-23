@@ -38,13 +38,11 @@ window.addEventListener("scroll", () => {
   const rect = contactSection.getBoundingClientRect();
   const vh = window.innerHeight;
 
-  // outside view → keep hidden below
   if (rect.top > vh) {
     hero3Img.style.transform = "translateY(120px)";
     return;
   }
 
-  // fully passed → lock in place
   if (rect.bottom < 0) {
     hero3Img.style.transform = "translateY(0px)";
     return;

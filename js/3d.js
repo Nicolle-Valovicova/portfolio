@@ -5,6 +5,7 @@ console.log("✅ 3d.js is running");
 
 const canvas = document.querySelector("#bmwCanvas");
 console.log("canvas found:", !!canvas);
+let page = document.querySelector("#contact");
 
 const scene = new THREE.Scene();
 
@@ -33,17 +34,17 @@ renderer.toneMappingExposure = 1.2;
 scene.add(new THREE.AmbientLight(0xffffff, 0.6));
 
 // key light (main contrast)
-const key = new THREE.DirectionalLight(0xffffff, 3.0);
+const key = new THREE.DirectionalLight(0xffffff, 0.2);
 key.position.set(6, 10, 6);
 scene.add(key);
 
 // fill light (soften dark side)
-const fill = new THREE.DirectionalLight(0xffffff, 1.2);
+const fill = new THREE.DirectionalLight(0xffffff, 2);
 fill.position.set(-6, 4, -6);
 scene.add(fill);
 
 // rim light (edge highlights = contrast)
-const rim = new THREE.DirectionalLight(0xffffff, 1.8);
+const rim = new THREE.DirectionalLight(0xffffff, 1);
 rim.position.set(0, 5, -10);
 scene.add(rim);
 
@@ -61,13 +62,17 @@ resize();
 
 const loader = new GLTFLoader();
 console.log("Loading GLB…");
+let model = null;
+
+let targetRX = 0; // target rotation x
+let targetRY = 0; // target rotation y
 
 loader.load(
   "../3dModel/bmw.glb",
   (gltf) => {
   console.log("✅ GLB loaded", gltf);
 
-  const model = gltf.scene;
+model = gltf.scene;
   scene.add(model);
 
   // --- 1) Center the model first ---
@@ -79,7 +84,7 @@ loader.load(
   // --- 2) Scale to real-world size: 10 cm = 0.10m ---
   // We assume 1 unit = 1 meter.
   const maxDim = Math.max(size.x, size.y, size.z);
-  const targetSizeMeters = 10; // 10 cm
+  const targetSizeMeters = 0.10; // 10 cm
   const scaleFactor = targetSizeMeters / maxDim;
   model.scale.setScalar(scaleFactor);
 
@@ -102,22 +107,45 @@ loader.load(
     }
   });
 
-  // --- 4) Nice 3/4 pose ---
-  model.rotation.y = Math.PI / 5; // ~36°
-  model.rotation.x = 0.08;        // small tilt (0.55 is NOT tiny)
+  page.addEventListener("mousemove", (e) => {
+  const r = canvas.getBoundingClientRect();
+  const x = ((e.clientX - r.left) / r.width) * 2 - 1;  // -1..1
+  const y = ((e.clientY - r.top) / r.height) * 2 - 1;  // -1..1
 
-  // --- 5) Camera fit (now it will be close, because model is 10cm) ---
-  const fov = camera.fov * (Math.PI / 180);
-  let z = Math.abs(maxDim2 / 2 / Math.tan(fov / 2)) * 2.2;
+  // tweak these for strength
+  targetRY = x * 0.2;    // left/right
+  targetRX = -y * 0.1;  // up/down
+});
+
+page.addEventListener("mouseleave", () => {
+  targetRX = 0;
+  targetRY = 0;
+});
+model.rotation.y = THREE.MathUtils.degToRad(160);
+model.rotation.x = THREE.MathUtils.degToRad(12);
+
+
+  const fov = camera.fov * (Math.PI / 190);
+  let z = Math.abs(maxDim2 / 2 / Math.tan(fov / 2)) * 0.9;
 
   camera.position.set(0, maxDim2 * 0.4, z);
   camera.lookAt(0, 0, 0);
 }
 
 );
+const baseRotY = THREE.MathUtils.degToRad(30);
+const baseRotX = THREE.MathUtils.degToRad(10);
+
 
 function animate() {
   requestAnimationFrame(animate);
+
+  if (model) {
+    // smooth follow
+    model.rotation.y += (baseRotY + targetRY - model.rotation.y) * 0.04;
+    model.rotation.x += (baseRotX + targetRX - model.rotation.x) * 0.04;
+  }
+
   renderer.render(scene, camera);
 }
 animate();
