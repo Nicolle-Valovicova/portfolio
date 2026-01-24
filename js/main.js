@@ -173,9 +173,9 @@ read_more_btns.forEach((btn) => {
 closeInfoBtn.addEventListener("click", () => {
   hideProjectInfo();
 });
-// TODO animations on scroll with aos
+// TODO make pic from yourself
 // TODO make website responsive for tablet and phone
 //  TODO php form send email directly to email
 // TODO update dmnic email to info@dmnic.nl
 // TODO make dutch version with json fetch
-// TODO 3d model adapt to phone tilting
+// TODO link the linkedin etc in banner + setup linkeding profile
