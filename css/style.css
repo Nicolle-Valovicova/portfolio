@@ -694,12 +694,55 @@ footer {
     contrast(100%);
 }
 /* media styling */
-@media screen and (max-width: 768px) {
-  .projects-container {
+/* Phone */
+@media (max-width: 768px) {
+ .projects-container {
     margin: 0 10px 25px;
   }
   .projects-container .swiper-button-prev,
   .projects-container .swiper-button-next {
     display: none;
+  }
+  #menuIcon{
+    width: 40px;
+    opacity: 1;
+    pointer-events: auto;
+    position: absolute;
+    left: 0;
+    transform: translate(15px,15px);
+  }
+  .headerLinks{
+    display: none;
+  }
+  .language-select img{
+    height: 30px;
+  }
+    .header-bgColor{
+    width: 100%;
+  }
+}
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #menuIcon{
+    width: 50px;
+    opacity: 1;
+    pointer-events: auto;
+    position: absolute;
+    left: 0;
+  }
+    .headerLinks{
+    display: none;
+
+  }
+  .header-bgColor{
+    width: 100%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  #menuIcon{
+    opacity: 0;
+    pointer-events: none;
   }
 }

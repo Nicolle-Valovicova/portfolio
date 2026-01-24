@@ -178,3 +178,4 @@ closeInfoBtn.addEventListener("click", () => {
 //  TODO php form send email directly to email
 // TODO update dmnic email to info@dmnic.nl
 // TODO make dutch version with json fetch
+// TODO 3d model adapt to phone tilting
