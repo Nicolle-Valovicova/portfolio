@@ -592,6 +592,7 @@ textarea {
   height: 100px;
   border: 2px solid white;
   font: inherit;
+  color: var(--primary-text-color);
   background-color: transparent;
 }
 .car-3d-wrap {
