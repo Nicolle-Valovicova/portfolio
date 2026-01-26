@@ -157,16 +157,20 @@ englishFlag.addEventListener("click", toggle);
 let read_more_btns = document.querySelectorAll(".read-more");
 let projectsInfo_container = document.querySelector(".projectsInfo-container");
 let closeInfoBtn = document.querySelector("#closeInfo");
-let bodyy = document.querySelector("#bodyy");
+let wholeWebPage = document.querySelector(".everything");
 
 function hideProjectInfo() {
   projectsInfo_container.classList.add("hidden");
   projectsInfo_container.classList.remove("display");
+      wholeWebPage.classList.remove("blurrBg");
+
 }
 hideProjectInfo();
 read_more_btns.forEach((btn) => {
   btn.addEventListener("click", () => {
     projectsInfo_container.classList.add("display");
+    wholeWebPage.classList.add("blurrBg");
+
   });
 });
 
@@ -176,4 +180,5 @@ closeInfoBtn.addEventListener("click", () => {
 // TODO make pic from yourself
 // TODO make website responsive for tablet and phone
 // TODO make dutch version with json fetch
+// TODO make the cards for ptojects vieuw more info a link to the site
 // TODO link the linkedin etc in banner + setup linkeding profile

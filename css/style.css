@@ -69,7 +69,8 @@ body {
     radial-gradient(at 0% 0%, hsla(0, 0%, 41%, 0.61) 0px, transparent 50%);
 }
 .blurrBg {
-  filter: blur(4px);
+  filter: blur(7px);
+  pointer-events: none;
 }
 /* end importnant styling */
 /* cool images styling */
@@ -156,6 +157,7 @@ section.hero1 img {
 .header-bgColor {
   width: 100vw;
   z-index: -1000;
+  pointer-events: none;
   background-image: linear-gradient(rgba(0, 0, 0, 0.606), rgba(195, 72, 72, 0));
   height: 150px;
   position: absolute;
@@ -337,11 +339,14 @@ th {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-image: url(../imgs/bgGradient.JPG);
 
-  background: rgba(59, 59, 59);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   transition: 0.3s ease;
   display: flex;
-
+  box-shadow: 0 10px 20px rgba(0, 0, 0);
   z-index: 1000;
 }
 .projectsInfo-container img {
@@ -351,6 +356,11 @@ th {
   background-color: var(--purple-color);
   border-radius: 50%;
   margin: 20px;
+}
+.projectInfo-position{
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
 }
 .projects-title {
   text-align: center;
@@ -462,11 +472,12 @@ th {
   color: var(--secondary-text-color);
   font-weight: 600;
 }
-.card-list .card-link .card-button {
+.card-list .card-link .card-button, #gtsButton {
   padding: 15px;
   text-decoration: none;
   border-radius: 25px;
   margin: 30px 0 5px;
+  font-size: 16px;
   color: var(--primary-text-color);
   cursor: pointer;
   background-color: transparent;
@@ -476,11 +487,19 @@ th {
   background-position: 0 -100%;
   transition: 1s ease;
 }
-.card-list .card-link .card-button a {
+.card-list .card-link .card-button a, #gtsButton {
   text-decoration: none;
   color: var(--primary-text-color);
 }
 .card-list .card-link .card-button:hover {
+  background-position: center;
+  color: var(--nightshade-color);
+}
+#gtsButton{
+  width:fit-content ;
+  border-radius: var(--radius-big);
+}
+#gtsButton:hover {
   background-position: center;
   color: var(--nightshade-color);
 }
