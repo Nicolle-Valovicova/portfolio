@@ -178,7 +178,6 @@ closeInfoBtn.addEventListener("click", () => {
   hideProjectInfo();
 });
 // TODO make pic from yourself
-// TODO make website responsive for tablet and phone
-// TODO make dutch version with json fetch
-// TODO make the cards for ptojects vieuw more info a link to the site
-// TODO link the linkedin etc in banner + setup linkeding profile
+// TODO make website responsive for tablet and phone (make it better)
+// TODO make dutch version with json fetch (uncomment flag and continue)
+// TODO make the cards for ptojects vieuw more info a link to the site (uncomment buttons and continue)

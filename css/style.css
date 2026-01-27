@@ -560,7 +560,10 @@ th {
   width: 500px;
   transform: translateY(80px);
 }
-
+.contactform-wrapper{
+  display: flex;
+  flex-direction: row;
+}
 .contactform {
   border-radius: var(--radius-big);
   padding: 20px;
@@ -825,6 +828,26 @@ footer {
     margin-bottom: 0px;
     width: 370px;
   }
+  .footer{
+    height: 30px;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-70px);
+  }
+ .flexed-socials {
+  display: flex;
+  margin-right: 80px;
+  gap: 15px;
+}
+.flexed-socials img {
+  width: 20px;
+  color: white;
+}
+.copyright{
+  scale: 0.7;
+  width: 100%;
+}
 }
 /* Tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
