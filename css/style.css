@@ -95,7 +95,9 @@ body {
   color: white;
 }
 /* css for parallaxing bg imgs */
-section.hero1,.hero2,.hero3 {
+section.hero1,
+.hero2,
+.hero3 {
   position: absolute;
   width: 100%;
   height: 100svh;
@@ -129,20 +131,20 @@ section.hero1::before {
   background: linear-gradient(to top, var(--bg-2), transparent);
   z-index: 1000;
 }
-.hero2 img, .hero3 img{
-    position: absolute;
+.hero2 img,
+.hero3 img {
+  position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   pointer-events: none;
-    will-change: transform;
-
+  will-change: transform;
 }
 section.hero1 img {
   position: absolute;
   inset: 0;
-      will-change: transform;
+  will-change: transform;
 
   width: 100%;
   height: 100%;
@@ -152,7 +154,6 @@ section.hero1 img {
 
 .main-container {
   height: 100vh;
-
 }
 .header-bgColor {
   width: 100vw;
@@ -324,8 +325,8 @@ th {
 }
 /* css for projects page */
 
-.projects-banner{
-    width: 100vw;
+.projects-banner {
+  width: 100vw;
   background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
   height: 150px;
   position: absolute;
@@ -357,10 +358,13 @@ th {
   border-radius: 50%;
   margin: 20px;
 }
-.projectInfo-position{
+.projectInfo-position {
   display: flex;
   flex-direction: column;
-  margin: 50px;
+  margin: 70px 70px;
+}
+.projectInfo-position p {
+  padding: 10px 0px 10px 0px;
 }
 .projects-title {
   text-align: center;
@@ -472,7 +476,8 @@ th {
   color: var(--secondary-text-color);
   font-weight: 600;
 }
-.card-list .card-link .card-button, #gtsButton {
+.card-list .card-link .card-button,
+#gtsButton {
   padding: 15px;
   text-decoration: none;
   border-radius: 25px;
@@ -487,7 +492,8 @@ th {
   background-position: 0 -100%;
   transition: 1s ease;
 }
-.card-list .card-link .card-button a, #gtsButton {
+.card-list .card-link .card-button a,
+#gtsButton {
   text-decoration: none;
   color: var(--primary-text-color);
 }
@@ -495,8 +501,8 @@ th {
   background-position: center;
   color: var(--nightshade-color);
 }
-#gtsButton{
-  width:fit-content ;
+#gtsButton {
+  width: fit-content;
   border-radius: var(--radius-big);
 }
 #gtsButton:hover {
@@ -541,13 +547,14 @@ th {
   background-position: center;
   background-repeat: no-repeat;
   align-items: center;
-    justify-content: space-around;
+  justify-content: space-around;
 }
-#reachoutTitle{
+#reachoutTitle {
   font-size: 70px;
 }
-.contact-text{
-margin-top: 20px;}
+.contact-text {
+  margin-top: 20px;
+}
 .contact-text h2 {
   position: absolute;
   width: 500px;
@@ -616,7 +623,7 @@ textarea {
 }
 .car-3d-wrap {
   position: relative;
-  overflow: visible; 
+  overflow: visible;
   transform: translateY(-30px);
   /* <-- IMPORTANT */
 }
@@ -725,53 +732,121 @@ footer {
 /* media styling */
 /* Phone */
 @media (max-width: 768px) {
- .projects-container {
+  .projects-container {
     margin: 0 10px 25px;
   }
   .projects-container .swiper-button-prev,
   .projects-container .swiper-button-next {
     display: none;
   }
-  #menuIcon{
+  #menuIcon {
     width: 40px;
     opacity: 1;
     pointer-events: auto;
     position: absolute;
     left: 0;
-    transform: translate(15px,15px);
+    transform: translate(15px, 15px);
   }
-  .headerLinks{
+  .headerLinks {
     display: none;
   }
-  .language-select img{
+  .language-select img {
     height: 30px;
   }
-    .header-bgColor{
+  .header-bgColor {
     width: 100%;
+  }
+  .hero-section {
+    transform: translate(20px, 200px);
+    width: 90%;
+  }
+  .hero-section p {
+    font-size: var(--size-txt-mobile);
+  }
+  .aboutMe-container {
+    width: 60%;
+  }
+  .aboutMe-container {
+    font-size: var(--size-txt-mobile);
+    justify-self: center;
+    height: 200vh;
+  }
+  .about-contains {
+    flex-direction: column;
+    justify-self: center;
+  }
+  .about-info {
+    width: 370px;
+  }
+  .about-info p {
+    font-size: var(--size-txt-mobile);
+  }
+  .extra-info {
+    flex-direction: column-reverse;
+    width: 370px;
+    margin-top: 30px;
+  }
+  .languages table {
+    width: 370px;
+    transform: translateX(0px);
+  }
+  .skills-wrapper{
+    margin-top: 60px;
+  }
+  .skills{
+    width: 70%;
+    justify-self: center;
+  }
+  .skills p{
+    font-size: var(--size-txt-mobile);
+  }
+  .text-skill{
+    width: 370px;
+  }
+  .skill-imgs{
+    width: 350px;
+    height: 50px;
+  }
+  .skill-imgs img{
+    width: 50px;
+  }
+  .projects-title{
+    width: 370px;
+  }
+  .car-3d-wrap{
+    display: none;
+  }
+  .contactform-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 150vh;
+  }
+  .contactform{
+    margin-bottom: 0px;
+    width: 370px;
   }
 }
 /* Tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
-    #menuIcon{
+  #menuIcon {
     width: 50px;
     opacity: 1;
     pointer-events: auto;
     position: absolute;
     left: 0;
   }
-    .headerLinks{
+  .headerLinks {
     display: none;
-
   }
-  .header-bgColor{
+  .header-bgColor {
     width: 100%;
   }
 }
 
 /* Desktop */
 @media (min-width: 1025px) {
-  #menuIcon{
-    display: none ;
+  #menuIcon {
+    display: none;
     opacity: 0;
     pointer-events: none;
   }
