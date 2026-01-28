@@ -284,7 +284,8 @@
               style="padding-bottom: 70px"
               data-aos="fade-up"
               data-aos-duration="700"
-              data-aos-delay="120" class="text-skill"
+              data-aos-delay="120"
+              class="text-skill"
             >
               These are the languages I actively use in real projects, what i
               currently can code with.
@@ -317,15 +318,16 @@
               id="exploringTitle"
               style="padding-top: 10rem; padding-bottom: 30px"
               data-aos="fade-up"
-              data-aos-duration="700" 
+              data-aos-duration="700"
             >
               Exploring
             </h1>
             <p
-              style=" padding-bottom: 70px"
+              style="padding-bottom: 70px"
               data-aos="fade-up"
               data-aos-duration="700"
-              data-aos-delay="120" class="text-skill"
+              data-aos-delay="120"
+              class="text-skill"
             >
               I'm currently exploring these languages/skills to use them in the
               future for work or projects.
@@ -677,88 +679,94 @@
             <img id="hero3Img" src="imgs/bgAbstract.png" alt="" />
           </section>
           <div class="contactform-wrapper">
-          <div class="contact-text" data-aos="fade-up" data-aos-duration="800">
-            <h1 id="reachoutTitle">Reach out</h1>
-            <h2>Would you like to collaborate? Let’s start a conversation.</h2>
-            <div class="car-3d-wrap">
-              <canvas id="bmwCanvas" class="webgl"></canvas>
+            <div
+              class="contact-text"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <h1 id="reachoutTitle">Reach out</h1>
+              <h2>
+                Would you like to collaborate? Let’s start a conversation.
+              </h2>
+              <div class="car-3d-wrap">
+                <canvas id="bmwCanvas" class="webgl"></canvas>
+              </div>
             </div>
-          </div>
-          <div
-            class="contactform"
-            id="contactform"
-            data-aos="zoom-in"
-            data-aos-duration="800"
-            data-aos-delay="150"
-          >
-            <form action="send-email.php" method="post">
-              <div class="inline" style="margin-top: 10px">
-                <label for="company">Company</label>
-                <input
-                  class="borderline"
-                  type="text"
-                  id="company"
-                  name="company"
-                  placeholder="Bv"
-                />
-              </div>
-              <div class="row-names">
-                <div class="inline-names">
-                  <label for="name">
-                    <span class="required-sym">* </span>First name</label
-                  >
+            <div
+              class="contactform"
+              id="contactform"
+              data-aos="zoom-in"
+              data-aos-duration="800"
+              data-aos-delay="150"
+            >
+              <form action="send-email.php" method="post">
+                <div class="inline" style="margin-top: 10px">
+                  <label for="company">Company</label>
                   <input
                     class="borderline"
                     type="text"
-                    id="name"
-                    name="name"
-                    placeholder="John"
-                    required
+                    id="company"
+                    name="company"
+                    placeholder="Bv"
                   />
                 </div>
-                <div class="inline-names">
-                  <label for="secName"
-                    ><span class="required-sym">* </span>Last name</label
+                <div class="row-names">
+                  <div class="inline-names">
+                    <label for="name">
+                      <span class="required-sym">* </span>First name</label
+                    >
+                    <input
+                      class="borderline"
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="John"
+                      required
+                    />
+                  </div>
+                  <div class="inline-names">
+                    <label for="secName"
+                      ><span class="required-sym">* </span>Last name</label
+                    >
+                    <input
+                      class="borderline"
+                      type="text"
+                      id="secName"
+                      name="secName"
+                      placeholder="Doe"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="inline">
+                  <label for="email"
+                    ><span class="required-sym">* </span>Email</label
                   >
                   <input
                     class="borderline"
-                    type="text"
-                    id="secName"
-                    name="secName"
-                    placeholder="Doe"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="your@email.com"
                     required
                   />
                 </div>
-              </div>
-              <div class="inline">
-                <label for="email"
-                  ><span class="required-sym">* </span>Email</label
-                >
-                <input
-                  class="borderline"
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="your@email.com"
-                  required
-                />
-              </div>
-              <div class="inline">
-                <label for="message"
-                  ><span class="required-sym">* </span>Message</label
-                >
-                <textarea
-                  class="borderline"
-                  name="message"
-                  id="message"
-                  placeholder="  Write your message here.."
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="submit-btn">
-                <span class="submit-text">Submit</span>
+                <div class="inline">
+                  <label for="message"
+                    ><span class="required-sym">* </span>Message</label
+                  >
+                  <textarea
+                    class="borderline"
+                    name="message"
+                    id="message"
+                    placeholder="  Write your message here.."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                  <span class="submit-text">Submit</span>
 
-                <!-- check icon (SVG)
+                  <!-- check icon (SVG)
               <svg class="submit-check" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M20 6L9 17l-5-5"
@@ -769,13 +777,15 @@
                   stroke-linejoin="round"
                 />
               </svg> -->
-              </button>
+                </button>
 
-              <p style="margin-top: 20px; font-size: 12px; text-align: center">
-                This will send a message directly to my email.
-              </p>
-            </form>
-          </div>
+                <p
+                  style="margin-top: 20px; font-size: 12px; text-align: center"
+                >
+                  This will send a message directly to my email.
+                </p>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -794,7 +804,7 @@
           <a href="https://www.youtube.com/@DmnicEditing" target="_blank">
             <img src="svg/youtube-168-svgrepo-com.svg" alt="Youtube img" />
           </a>
-        </div>                                                                                                                                                                                                                                                                                                 
+        </div>
       </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
