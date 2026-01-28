@@ -816,18 +816,38 @@ footer {
   .projects-title {
     width: 370px;
   }
+.card-item{
+  scale: 0.9;
+}
   .car-3d-wrap {
     display: none;
   }
   .contactform-wrapper {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    transform: translateY(150px);
+  }
+  .contact{
     height: 150vh;
   }
   .contactform {
-    margin-bottom: 0px;
     width: 370px;
+    margin-top: 150px;
   }
+  #reachoutTitle {
+  font-size: 28px;
+  }
+ .contact-text{
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+ }
+.contact-text h2 {
+  transform: translateY(-0px);
+font-size: var(--size-txt-mobile);
+font-weight: 200;
+}
   .footer {
     height: 30px;
     padding: 5px;
@@ -847,6 +867,13 @@ footer {
   .copyright {
     scale: 0.7;
     width: 100%;
+  }
+  #header-logo{
+      margin-left: 0%;
+height: 20px;
+transform: translate(170px, 15px);
+justify-content: center;
+justify-self: center;
   }
 }
 /* Tablet */
